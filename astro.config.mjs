@@ -1,15 +1,12 @@
 import { defineConfig } from 'astro/config';
 import tailwind from '@astrojs/tailwind';
-import nodejs from '@astrojs/node';
+// import nodejs from '@astrojs/node';
 
 import starlight from "@astrojs/starlight";
 
 // https://astro.build/config
 export default defineConfig({
   output: 'static',
-  adapter: nodejs({
-    mode: 'standalone'
-  }),
   integrations: [
     tailwind(),
     starlight({
