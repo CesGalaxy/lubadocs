@@ -12,7 +12,7 @@ import Layout from '../layouts/Layout.astro';
             </header>
             <h2 class="text-center text-xl md:text-3xl">A programming language designed to make programming easy.</h2>
         </section>
-        <section class="container mx-auto px-16 py-8 bg-gray-800" id="about">
+        <!-- <section class="container mx-auto px-16 py-8 bg-gray-800" id="about">
             <header class="mb-4">
                 <h2 class="text-orange-500 text-6xl font-bold">About</h2>
             </header>
@@ -26,6 +26,24 @@ import Layout from '../layouts/Layout.astro';
                     <code>hell</code>
                 </div>
             </div>
+        </section> -->
+        <section class="container mx-auto px-4">
+            <header class="text-gray-300 mb-12">
+                <h2 class="text-4xl md:text-6xl text-orange-500 text-center font-bold">Explore all the resources</h1>
+                <h3 class="text-center text-xl md:text-3xl mt-2">Learn by examples, guides, tutorials and more.</h2>
+            </header>
+            <ul id="resources-links" class="grid grid-cols-1 px-4 sm:px-0 sm:grid-cols-2 md:grid-cols-4 gap-4 w-full">
+                <li><a href="/resources/examples">Examples</a></li>
+                <li><a href="/guides">Guides</a></li>
+                <li><a href="/resources/tutorials">Tutorials</a></li>
+                <li><a href="/docs/reference">Reference</a></li>
+            </ul>
         </section>
     </main>
 </Layout>
+
+<style>
+    #resources-links a {
+        @apply w-full block px-4 py-2 text-center bg-orange-500 text-lg text-white font-bold hover:underline hover:bg-orange-600 cursor-pointer;
+    }
+</style>
