@@ -1,0 +1,31 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+	<main id="wrapper" class="py-16 flex flex-col items-stretch gap-16">
+        <section class="container mx-auto px-4">
+            <header class="text-gray-300 mb-12">
+                <h1 class="text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl">It's not <span class="text-blue-700 font-bold">Python</span></h1>
+                <h1 class="text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl">neither <span class="text-purple-700 font-bold">Lua</span></h1>
+                <h1 class="text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl">nor <span class="text-yellow-500 font-bold">JavaScript</span>.</h1>
+            </header>
+            <h2 class="text-center text-xl md:text-3xl">A programming language designed to make programming easy.</h2>
+        </section>
+        <section class="container mx-auto px-16 py-8 bg-gray-800" id="about">
+            <header class="mb-4">
+                <h2 class="text-orange-500 text-6xl font-bold">About</h2>
+            </header>
+            <div class="grid grid-cols-2 gap-32">
+                <div class="col-span-2 md:col-span-1">
+                    <p>
+                        Lubalia es un lenguaje de programación diseñado para ser implementado en otros programas.
+                    </p>
+                </div>
+                <div class="hidden md:block">
+                    <code>hell</code>
+                </div>
+            </div>
+        </section>
+    </main>
+</Layout>

@@ -1,0 +1,45 @@
+---
+import 'styles/styles.css';
+import { ViewTransitions } from 'astro:transitions';
+import Footer from 'components/Footer.astro';
+import Nav from 'components/Nav.astro';
+
+export interface Props {
+	title?: string;
+	location?: string;
+}
+
+const { title = "Lubalia", location } = Astro.props as Props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+		<meta name="generator" content={Astro.generator} />
+		<meta name="view-transition" content="same-origin" />
+
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+		<link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap" rel="stylesheet">
+
+		<title>{title}</title>
+
+		<ViewTransitions />
+	</head>
+	<body class="font-['Kode_Mono'] bg-gray-900 text-gray-50">
+		<div class="h-screen overflow-hidden flex flex-col" id="app">
+			<Nav location={location} />
+			<div id="container" class="h-full flex-1 overflow-y-auto">
+				<div id="content">
+					<slot />
+				</div>
+				<Footer />
+			</div>
+		</div>
+	</body>
+</html>
