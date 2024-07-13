@@ -5,12 +5,12 @@ import Layout from '../layouts/Layout.astro';
 <Layout>
 	<main id="wrapper" class="py-16 flex flex-col items-stretch gap-16">
         <section class="container mx-auto px-4">
-            <header class="text-gray-300 mb-12">
+            <header class="text-gray-300 mb-10">
                 <h1 class="text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl">It's not <span class="text-blue-700 font-bold">Python</span></h1>
                 <h1 class="text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl">neither <span class="text-purple-700 font-bold">Lua</span></h1>
                 <h1 class="text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl">nor <span class="text-yellow-500 font-bold">JavaScript</span>.</h1>
             </header>
-            <h2 class="text-center text-xl md:text-3xl">A programming language designed to make programming easy.</h2>
+            <h3>A programming language designed to make programming easy.</h2>
         </section>
         <section class="container mx-auto px-16 py-8 bg-gray-800" id="about">
             <header class="mb-4">
@@ -23,20 +23,20 @@ import Layout from '../layouts/Layout.astro';
                     </p>
                 </div>
                 <div class="hidden md:block">
-                    <code>hell</code>
+                    <code>hello</code>
                 </div>
             </div>
         </section>
         <section class="container mx-auto px-4">
             <header class="text-gray-300 mb-12">
                 <h2 class="text-4xl md:text-6xl text-orange-500 text-center font-bold">Explore all the resources</h1>
-                <h3 class="text-center text-xl md:text-3xl mt-2">Learn by examples, guides, tutorials and more.</h2>
+                <h3>Learn by examples, guides, tutorials and more.</h2>
             </header>
             <ul id="resources-links" class="grid grid-cols-1 px-4 sm:px-0 sm:grid-cols-2 md:grid-cols-4 gap-4 w-full">
-                <li><a href="/resources/examples">Examples</a></li>
+                <li><a href="/examples">Examples</a></li>
                 <li><a href="/guides">Guides</a></li>
-                <li><a href="/resources/tutorials">Tutorials</a></li>
-                <li><a href="/docs/reference">Reference</a></li>
+                <li><a href="/tutorials">Tutorials</a></li>
+                <li><a href="/reference">Reference</a></li>
             </ul>
         </section>
     </main>
@@ -45,5 +45,9 @@ import Layout from '../layouts/Layout.astro';
 <style>
     #resources-links a {
         @apply w-full block px-4 py-2 text-center bg-orange-500 text-lg text-white font-bold hover:underline hover:bg-orange-600 cursor-pointer;
+    }
+
+    h3 {
+        @apply text-center text-xl md:text-3xl mt-2;
     }
 </style>
